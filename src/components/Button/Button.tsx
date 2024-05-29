@@ -3,18 +3,30 @@ import { Button as AntButton } from 'antd'
 import type { ButtonProps as AntButtonProps } from 'antd/lib/button/index'
 import Tooltip from 'antd/lib/tooltip'
 import classNames from 'classnames'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const ButtonStyled = styled(AntButton)`
-  background-color: #9e78cf;
+  background-color: #3e1671;
   border: none;
   color: white;
 
   &:hover,
   &:focus {
-    background-color: #3e1671 !important;
+    background-color: #9e78cf !important;
     color: white !important;
   }
+
+  ${(props) =>
+    props.disabled &&
+    css`
+      background-color: #7a78cf !important;
+      color: white !important;
+
+      &:hover,
+      &:focus {
+        background-color: #7a78cf !important;
+      }
+    `}
 `
 
 export type ButtonProps = AntButtonProps & {

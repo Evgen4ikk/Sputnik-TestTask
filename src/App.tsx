@@ -1,7 +1,11 @@
 import { Main as MainLayout } from '@/layouts/main.tsx'
 
 const App = () => {
-  return <MainLayout />
+  return (
+    <div className='container'>
+      <MainLayout />
+    </div>
+  )
 }
 
 export default App
