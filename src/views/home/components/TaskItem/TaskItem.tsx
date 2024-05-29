@@ -8,6 +8,7 @@ import { Button } from '@/components/Button'
 import { useFavoritesStore } from '@/store/favoriteStore'
 
 const FlexStyled = styled(Flex)`
+  width: 100%;
   background-color: #15101c;
   padding: 8px 12px;
   border-radius: 6px;
@@ -20,6 +21,10 @@ const FavoriteStar = styled.div`
   left: -8px;
 `
 
+const Item = styled.div`
+  max-width: 350px;
+  overflow: hidden;
+`
 interface TaskItemProps {
   task: TaskData
 }
@@ -64,9 +69,9 @@ export const TaskItem: FC<TaskItemProps> = ({ task }) => {
         {isTaskInFavorites(task.id) && <StarFilled size={28} />}
       </FavoriteStar>
       <Flex vertical gap={8}>
-        <div>Title: {task.attributes.title}</div>
-        <div>Description: {task.attributes.description}</div>
-        <div>Status: {task.attributes.status}</div>
+        <Item>Title: {task.attributes.title}</Item>
+        <Item>Description: {task.attributes.description}</Item>
+        <Item>Status: {task.attributes.status}</Item>
       </Flex>
       <Flex vertical gap={8} justify='space-between'>
         <Button

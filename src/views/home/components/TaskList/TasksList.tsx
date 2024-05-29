@@ -55,6 +55,8 @@ export const TasksList: FC = () => {
     }
   }
 
+  console.log(data?.pages.length)
+
   if (isError) {
     return (
       <Alert
@@ -77,11 +79,17 @@ export const TasksList: FC = () => {
         {data?.pages.map((page, pageIndex) => (
           <div key={pageIndex}>
             <FlexStyled>
-              {page.data.filter(filterTasks).map((task) => (
-                <div key={task.id}>
-                  <TaskItem task={task} />
-                </div>
-              ))}
+              {page.data.length === 0 ? (
+                <div>Задач не найдено</div>
+              ) : (
+                <>
+                  {page.data.filter(filterTasks).map((task) => (
+                    <div key={task.id}>
+                      <TaskItem task={task} />
+                    </div>
+                  ))}
+                </>
+              )}
             </FlexStyled>
           </div>
         ))}
