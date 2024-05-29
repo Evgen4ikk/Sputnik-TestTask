@@ -4,3 +4,4 @@ package.json
 package-lock.json
 .eslintrc.cjs
 *.config.ts
+*.test.ts

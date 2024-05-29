@@ -1,9 +1,9 @@
-import { Main as MainLayout } from '@/layouts/main.tsx'
+import { Home } from './views/home'
 
 const App = () => {
   return (
     <div className='container'>
-      <MainLayout />
+      <Home />
     </div>
   )
 }

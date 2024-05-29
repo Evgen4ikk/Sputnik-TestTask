@@ -5,10 +5,10 @@ type TaskData = {
   attributes: {
     title: string
     description: string
-    status: string
-    createdAt: string
-    updatedAt: string
-    publishedAt: string
+    status?: string
+    createdAt?: string
+    updatedAt?: string
+    publishedAt?: string
   }
 }
 

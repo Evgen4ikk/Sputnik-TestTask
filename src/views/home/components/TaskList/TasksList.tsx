@@ -55,8 +55,6 @@ export const TasksList: FC = () => {
     }
   }
 
-  console.log(data?.pages.length)
-
   if (isError) {
     return (
       <Alert

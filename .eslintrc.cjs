@@ -23,7 +23,8 @@ module.exports = {
         '@typescript-eslint/no-throw-literal': 'off',
         'no-restricted-syntax': 'off',
         'promise/always-return': 'off',
-        'jsx-a11y/label-has-associated-control': 'warn'
+        'jsx-a11y/label-has-associated-control': 'warn',
+        'react/no-array-index-key': 'off'
       }
     }
   ]
