@@ -1,30 +1,38 @@
-# React + TypeScript + Vite
+# ToDo List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### Функционал: 
+- Добавление задачи
+- Удаление задачи
+- Получение списка всех задач
+- Изменение статуса задачи
+- Infinite Scroll
+- Возможность добавить задачу в избранное, избранные задачи должны
+отображаться даже после обновления страницы
+- Фильтрация задач по “Все”, “Выполненные”, “Не выполненные”,
+“Избранное”
 
-Currently, two official plugins are available:
+### Используемый стек:
+- React
+- TypeScript
+- стейт менеджер: Zustand
+- UI библиотека: AntDesign
+- Стилизация через Styled Components
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Запуск проекта
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```
+npm install - устанавливаем зависимости
+npm run start - запуск проекта в dev режиме
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+---
+
+## Скрипты
+
+-   `npm run start` - Запуск проекта в dev режимеа
+-   `npm run build` - Сборка в prod режиме
+-   `npm run lint` - Проверка ts файлов линтером
+-   `npm run test` - Запуск unit тестов с jest
+-   `npm run prepare` - прекоммит хуки
+
+---
