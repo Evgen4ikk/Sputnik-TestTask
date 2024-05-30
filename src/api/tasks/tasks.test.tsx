@@ -100,7 +100,7 @@ describe('useChangeTaskStatusMutation', () => {
     queryClient.clear()
   })
 
-  test('changes task status successfully', async () => {
+  test('change task status', async () => {
     const taskId = 1
     const updateData = {
       data: {
